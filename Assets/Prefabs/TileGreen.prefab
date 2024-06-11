@@ -8,6 +8,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -787258159789178116, guid: 8c6743639db2fe04185879cb3fa0772e, type: 3}
+      propertyPath: m_Size.x
+      value: 4.45
+      objectReference: {fileID: 0}
+    - target: {fileID: -787258159789178116, guid: 8c6743639db2fe04185879cb3fa0772e, type: 3}
+      propertyPath: m_Size.y
+      value: 4.37
+      objectReference: {fileID: 0}
+    - target: {fileID: -787258159789178116, guid: 8c6743639db2fe04185879cb3fa0772e, type: 3}
+      propertyPath: m_Size.z
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: -787258159789178116, guid: 8c6743639db2fe04185879cb3fa0772e, type: 3}
+      propertyPath: m_Center.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: -787258159789178116, guid: 8c6743639db2fe04185879cb3fa0772e, type: 3}
+      propertyPath: m_Center.y
+      value: 0.18
+      objectReference: {fileID: 0}
     - target: {fileID: 3910937070959548205, guid: 8c6743639db2fe04185879cb3fa0772e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -26,15 +46,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4116823361279375456, guid: 8c6743639db2fe04185879cb3fa0772e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11674.181
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4116823361279375456, guid: 8c6743639db2fe04185879cb3fa0772e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 76.203354
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4116823361279375456, guid: 8c6743639db2fe04185879cb3fa0772e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9882.326
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4116823361279375456, guid: 8c6743639db2fe04185879cb3fa0772e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -103,4 +123,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coords: {x: 0, y: 0}
-  _id: 2
+  _id: 1

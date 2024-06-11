@@ -1,46 +1,51 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEngine;
+using Events;
 using UnityEngine.SceneManagement;
 using Zenject;
+using Envar;
 
-public class ProjectInstaller : MonoInstaller<ProjectInstaller>  //Zenject Klassıdır.MonoInstallerın BuildInstaller Kullanma zorunluluğu vardır.
+namespace Installers
 {
+    public class ProjectInstaller : MonoInstaller<ProjectInstaller>
+    {
         private ProjectEvents _projectEvents;
-        public override void InstallBindings()  // Kullanmak zorunludur.Override etmezsek Hata verir.
+        private InputEvents _inputEvents;
+        
+
+        public override void InstallBindings()   //Zenject ile beraber gelir kullanmak zorunludur.
         {
-            //Burada yeni projectEvents atıyoruz ve onu Containere atıyoruz. Assingle İle Single yapıyoruz
-            _projectEvents = new ();
+            _projectEvents = new ProjectEvents();
             Container.BindInstance(_projectEvents).AsSingle();
+            
+            _inputEvents = new InputEvents();
+            Container.BindInstance(_inputEvents).AsSingle(); // burada container e tekli olarak ekledik
+
+           
         }
 
         private void Awake()
         {
             RegisterEvents();
         }
+
         public override void Start()
-        {   
+        {
             _projectEvents.ProjectStarted?.Invoke();
         }
 
-        private static void LoadScene(string sceneName)
- 
-        {
-            SceneManager.LoadScene(sceneName);
-         }
+        private static void LoadScene(string sceneName) {SceneManager.LoadScene(sceneName);}
+
         private void RegisterEvents()
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
-        private void OnSceneLoaded(Scene LoadedScene, LoadSceneMode arg1)
+        private void OnSceneLoaded(Scene loadedScene, LoadSceneMode arg1)
         {
-            if (LoadedScene.name == "Login")
+            if(loadedScene.name == EnVar.LoginSceneName)
             {
-             LoadScene("Main");   
+                LoadScene(EnVar.MainSceneName);
             }
         }
+    }
 }
   

@@ -8,8 +8,13 @@ public class Tile:MonoBehaviour
     [SerializeField] private Vector2Int _coords; 
     public int ID => _id;
     [SerializeField] private int _id;
-    public void Consturct(Vector2Int coords)
+    public void Construct(Vector2Int coords)
     {
         _coords = coords;
+    }
+
+    private void OnMouseDown()
+    {
+        
     }
 }
