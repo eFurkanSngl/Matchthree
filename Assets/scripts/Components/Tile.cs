@@ -1,20 +1,39 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-[Serializable]
-public class Tile:MonoBehaviour
+namespace Components
 {
-    public Vector2Int Coord => _coords;
-    [SerializeField] private Vector2Int _coords; 
-    public int ID => _id;
-    [SerializeField] private int _id;
-    public void Construct(Vector2Int coords)
+    public class Tile:MonoBehaviour, ICoordSet
     {
-        _coords = coords;
+        public Vector2Int Coord => _coords;
+        [SerializeField] private Vector2Int _coords; 
+        public int ID => _id;
+        [SerializeField] private int _id;
+        public void Construct(Vector2Int coords)
+        {
+            _coords = coords;
+        }
+
+        private void OnMouseDown()
+        {
+        
+        }
+
+        void ICoordSet.SetCoord(Vector2Int coord)
+        {
+            _coords = coord;
+        }
+        
+        void ICoordSet.SetCoord(int x, int y)
+        {
+            _coords = new Vector2Int(x, y);
+        }
+     
     }
 
-    private void OnMouseDown()
+    public interface ICoordSet
     {
+        void SetCoord(Vector2Int coord); 
         
+        void SetCoord(int x, int y);
     }
 }

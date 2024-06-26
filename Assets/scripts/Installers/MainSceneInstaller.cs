@@ -3,7 +3,7 @@ using Zenject;
 
 namespace Installers
 {
-    public class MainSceneInstaller:MonoInstaller
+    public class MainSceneInstaller:MonoInstaller<MainSceneInstaller>
     {
         [SerializeField] private Camera _camera;
 
@@ -12,4 +12,4 @@ namespace Installers
             Container.BindInstance(_camera);
         }
     }
-}
+} 

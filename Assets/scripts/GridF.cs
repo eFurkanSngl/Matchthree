@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Components;
+using Extensions.System;
+using OpenCover.Framework.Model;
 using UnityEngine;
 
 public static class GridF
@@ -7,14 +10,10 @@ public static class GridF
         private const int MatchOffset = 2;
 
         public static  void GetSpawnableColors(this Tile[,] grid, Vector2Int coord, List<int> results)
-        {
-            if (grid == null || results == null)
-            {
-                Debug.LogError("Grid or result list is null.");
-                return;
-            }
+        {  
+           
             
-            int lastPrefabID = -1;
+           /* int lastPrefabID = -1;
             int lastIDcounter = 0;
 
             int leftMax = coord.x - MatchOffset;
@@ -79,9 +78,10 @@ public static class GridF
                 {
                     lastIDcounter = 0;
                     lastPrefabID = -1;
+                    continue;
                 }
 
-                if (lastPrefabID == -1)
+               if (lastPrefabID == -1)
                 {
                     lastPrefabID = currtTile.ID;
                     lastIDcounter = 1; // Sayıcı başlatmak için 1 yapıyoruz
@@ -100,7 +100,7 @@ public static class GridF
         
 
             }
-        }
+        } 
 
         public static bool HasMatchesRight(this Tile[,] grid, Vector2Int abstractCoord, int prefabId)
         {
@@ -140,39 +140,92 @@ public static class GridF
                 }
             }
 
-            return false;
+            return false; 
+            */
         }
+        public static List<Tile> GetMatchesX(this Tile[,] thisGrid, Tile tile) =>
+            GetMatchesX(thisGrid, tile.Coord, tile.ID);
 
-        public static bool HastMatchLeft(this Tile[,] grid, Vector2Int coord, int prefabId)
+        public static List<Tile> GetMatchesX(this Tile[,] grid, Vector2Int coord, int prefabId)
         {
-            int leftmax = coord.x - MatchOffset;
-            leftmax = ClampInsideGrid(leftmax, grid.GetLength(0));
+            Vector2Int prevCoord = coord;
+            Tile thisTile = grid.Get(coord);
+            List<Tile> matches = new();
 
-            int matchCoutner = 0;
-
-            for (int x = leftmax; x <= coord.x; x++)
+            for (int x = 0; x < grid.GetLength(0); x++)
             {
-                if (grid[x, coord.y].ID == prefabId)
-                {
-                    matchCoutner++;
-                }
-                else
-                {
-                    matchCoutner = 0;
-                }
+                Tile currTile = grid[x, coord.y];
 
-                if (matchCoutner == 3)
+                if (currTile.ID == prefabId)
                 {
-                    return true;
+                    matches.Add(currTile);
                 }
+                //Eğer currTile id ile prefabId aynı ise eşleşmeye currTile ı ekle
+
+                else if (matches.Contains(thisTile) == false)
+                {
+                    matches.Clear();
+                }
+                // burada eşleşen Contains da yoksa yani buTile  eşleşmeyi Sil
+                else if (matches.Contains(thisTile))
+                {
+                    break;
+                }
+                // burada Matches grubunda thisTile varsa break diyip cıkıyoruz.
             }
-            return false;
+            return matches; 
+            // Buradaki fonksiyonun amacı : Grid boyunda spawnlanan renklere bize ( Thistile) eşit mi değil mi
+            // eşleşmeleri matches a ekliyruz
+            // Eşleşmede ThisTile yoksa clearlıyor. Eğer yeni eşleşme de bizim tile varsa ve ondan sonra farklı eşleşme gelirse quit atıyoruz.
+            // çünkü matches grubunda benim Thistile'ım onlarla ile beraber.
         }
 
+        public static List<Tile> GetMatchesY(this Tile[,] thisGrid, Tile tile) =>
+            GetMatchesY(thisGrid, tile.Coord, tile.ID);
+            
+            
+        public static List<Tile> GetMatchesY(this Tile[,] grid, Vector2Int coord, int prefabId)
+        {
+            Tile thisTile = grid.Get(coord);
+            List<Tile> matches = new();
+
+            for (int y = 0; y < grid.GetLength(1); y++)
+            {
+                Tile currTile = grid[coord.x ,y];
+
+                if (currTile.ID == prefabId)
+                {
+                    matches.Add(currTile);
+                }
+                //Eğer currTile id ile prefabId aynı ise eşleşmeye currTile ı ekle
+
+                else if (matches.Contains(thisTile) == false)
+                {
+                    matches.Clear();
+                }
+                // burada eşleşen Contains da yoksa yani buTile  eşleşmeyi Sil
+                else if (matches.Contains(thisTile))
+                {
+                    break;
+                }
+                // burada Matches grubunda thisTile varsa break diyip cıkıyoruz.
+            }
+            return matches; 
+            // Buradaki fonksiyonun amacı : Grid boyunda spawnlanan renklere bize ( Thistile) eşit mi değil mi
+            // eşleşmeleri matches a ekliyruz
+            // Eşleşmede ThisTile yoksa clearlıyor. Eğer yeni eşleşme de bizim tile varsa ve ondan sonra farklı eşleşme gelirse quit atıyoruz.
+            // çünkü matches grubunda benim Thistile'ım onlarla ile beraber.
+        }
+        
+        /*
         private static bool HastMatchTop(this Tile[,] grid, Vector2Int coord, int prefabId)
         {
             int topMax = coord.y + MatchOffset;
+            // burada coord'tan y ile matchOffset toplamını toptMax e atıyoruz.
+
             topMax = ClampInsideGrid(topMax, grid.GetLength(1));
+            // burada Clamp metod cağırıyoruz değişken veriyoruyz min ve maks değer arasında tam sayayı döndürecek
+
             
             int matchCounter = 0;
 
@@ -221,6 +274,7 @@ public static class GridF
 
              return false;
         }
+        */
 
 
         private static int ClampInsideGrid(int value, int gridSize)                 
@@ -230,20 +284,151 @@ public static class GridF
             // Sıkıştırır Min ve max arasında ise verilen değeri döndürür.
             }           
         
-        private static bool IsInsideGrid(this Tile[,] grid, int axis, int axisIndex)
+        public static bool IsInsideGrid(this Tile[,] grid, int axis, int axisIndex)
         {
             int min = 0;
             int max = grid.GetLength(axisIndex);
             // burada grid array olduğu için eksenin İndeksini max olarak alıyor.
             
-            return axis >=0 && axis < max;
+            return axis >=min && axis < max;
             // burada axis 0 ve max arasında gelecek
         }
 
-        private static bool IsInsideGrid(this Tile[,] grid, Vector2Int coord)
+        public static bool IsInsideGrid(this Tile[,] grid, Vector2Int coord)
         {
             return grid.IsInsideGrid(coord.x, 0) && grid.IsInsideGrid(coord.y, 1);
         }
+
+        public static GridDir GetGridDir(Vector3 input)
+        {
+            int maxAxis = 0;
+            float maxAxisSign = input[0].Sign();
+            float lastAxisLength = input[0].Abs();
+            
+            
+            for (int axisIndex = 0; axisIndex < 3; axisIndex++)
+            {
+                float thisAxisLength = input[axisIndex];
+                float thisAxisLengthAbs = thisAxisLength.Abs();
+
+                if (thisAxisLength > thisAxisLengthAbs)
+                {
+                    lastAxisLength = thisAxisLength;
+                    maxAxis = axisIndex;
+                    maxAxisSign = thisAxisLength.Sign();
+                }
+            }
+
+            return GetGridDir((maxAxis + 1) * maxAxisSign.CeilToInt()); //CeilToInt: Yuvarla ve Int tipine dön demek. 
+        }
+        
+        public static Vector2Int GetGridDirVector(Vector3 input)
+        {
+            int maxAxis = 0;
+            float maxAxisSign = input[0].Sign();
+            float lastAxisLength = input[0].Abs();
+            
+            
+            for (int axisIndex = 0; axisIndex < 3; axisIndex++)
+            {
+                float thisAxisLength = input[axisIndex];
+                float thisAxisLengthAbs = thisAxisLength.Abs();
+
+                if (thisAxisLength > thisAxisLengthAbs)
+                {
+                    lastAxisLength = thisAxisLength;
+                    maxAxis = axisIndex;
+                    maxAxisSign = thisAxisLength.Sign();
+                }
+            }
+
+            return GetGridDir((maxAxis + 1) * maxAxisSign.CeilToInt()).ToVector(); //CeilToInt: Yuvarla ve Int tipine dön demek. 
+        }
+        
+        /// <summary>
+        /// Sıfır Olmayan Eksen Dizinini işaretiyle dönüştürme = acıklama
+        /// </summary>
+        /// <param name="axisSingIndex">Sıfırdan başlamamalı </param>  = parametre alması gereken
+        /// <returns>Grid yön</returns> = döndürdüğü şeyin acıklaması 
+       
+        // Summary yukarıda verdiğimiz acıklama metinini fonksiyonun üstüne gelince bize gösterir.
+        public static GridDir GetGridDir(int axisSingIndex)
+        {
+            switch (axisSingIndex)
+            {
+                case 1:
+                    return GridDir.rigth;
+                case 2:
+                    return GridDir.up;
+                case -1:
+                    return GridDir.left;
+                case -2:
+                    return GridDir.down;
+                default: return GridDir.Null;
+            }
+            
+        }
+
+        public static Vector2Int ToVector(this GridDir thisGridDir)
+        {
+            switch (thisGridDir)
+            {
+                case GridDir.Null : return Vector2Int.zero;
+                case GridDir.left : return Vector2Int.left;
+                case GridDir.rigth : return Vector2Int.right;
+                case GridDir.up : return Vector2Int.up;
+                case GridDir.down : return Vector2Int.down;
+                default: throw new ArgumentException();
+            }
+        }
+
+
+        public static Tile Get( this Tile[,] thisGrid, Vector2Int coord)
+        {
+            return thisGrid[coord.x, coord.y];
+        }
+
+        public static Tile Set(this Tile[,] thisGrid,Tile tileToSet, Vector2Int coord)
+        {
+            Tile tileAtCoord = thisGrid.Get(coord);
+
+            thisGrid[coord.x, coord.y] = tileToSet;
+            ICoordSet coordSet = tileToSet;
+            coordSet.SetCoord(coord);
+            
+            return tileAtCoord;
+         }
+
+        public static void Switch(this Tile[,] thisGrid,Tile fromTile ,Vector2Int toCoord)
+        {
+            Vector2Int fromCoords = fromTile.Coord;
+            
+          Tile toTile = thisGrid.Set(fromTile,toCoord); 
+          // parametre olan fromtile ve tocoordu fromCoords  a set ettik
+          
+          thisGrid.Set(toTile, fromCoords); 
+        }
+
+        public static void Switch(this Tile[,] thisGrid, Tile fromTile, Tile toTile)
+        {
+            Vector2Int fromCoords = fromTile.Coord;
+            Vector2Int toCoords = toTile.Coord;
+
+            thisGrid.Set(fromTile,toCoords);
+           thisGrid.Set(toTile,fromCoords);
+        }
+
     }
+    
+
+public enum GridDir
+{
+    Null,
+    left,
+    rigth,
+    up,
+    down
+    
+}
 
 

@@ -9,7 +9,7 @@ namespace Installers
     {
         private ProjectEvents _projectEvents;
         private InputEvents _inputEvents;
-        
+        private GridEvents _gridEvents;
 
         public override void InstallBindings()   //Zenject ile beraber gelir kullanmak zorunludur.
         {
@@ -18,8 +18,10 @@ namespace Installers
             
             _inputEvents = new InputEvents();
             Container.BindInstance(_inputEvents).AsSingle(); // burada container e tekli olarak ekledik
+            _gridEvents = new GridEvents();
+            Container.BindInstance(_gridEvents).AsSingle();
 
-           
+
         }
 
         private void Awake()
