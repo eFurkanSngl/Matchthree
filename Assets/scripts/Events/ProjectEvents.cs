@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ProjectEvents : MonoBehaviour
+public class ProjectEvents 
 {
     public  UnityAction ProjectStarted;
 }

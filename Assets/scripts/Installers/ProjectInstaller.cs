@@ -1,7 +1,6 @@
 using Events;
 using UnityEngine.SceneManagement;
 using Zenject;
-using Envar;
 
 namespace Installers
 {
@@ -10,7 +9,7 @@ namespace Installers
         private ProjectEvents _projectEvents;
         private InputEvents _inputEvents;
         private GridEvents _gridEvents;
-
+      
         public override void InstallBindings()   //Zenject ile beraber gelir kullanmak zorunludur.
         {
             _projectEvents = new ProjectEvents();
@@ -23,7 +22,7 @@ namespace Installers
 
 
         }
-
+ 
         private void Awake()
         {
             RegisterEvents();
@@ -43,9 +42,9 @@ namespace Installers
 
         private void OnSceneLoaded(Scene loadedScene, LoadSceneMode arg1)
         {
-            if(loadedScene.name == EnVar.LoginSceneName)
+            if(loadedScene.name == EnvVar.LoginSceneName)
             {
-                LoadScene(EnVar.MainSceneName);
+                LoadScene(EnvVar.MainSceneName);
             }
         }
     }

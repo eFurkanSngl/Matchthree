@@ -2,19 +2,18 @@
 using Extensions.Unity;
 using UnityEngine;
 using Zenject;
+using Extensions.Unity.MonoHelper;
 
 namespace Components
 {
-    public class InputListener : MonoBehaviour
+    public class InputListener : EventListenerMono
     {
         [Inject] private InputEvents InputEvents{get;set;}
         [Inject] private Camera Camera{get;set;}
+        [Inject] private GridEvents GridEvents{get; set; }
         private RoutineHelper _inputRoutine;
 
         private void Awake() {_inputRoutine = new RoutineHelper(this, null, InputUpdate);}
-
-        private void Start() {_inputRoutine.StartCoroutine();}
-
         private void InputUpdate()
         {
             if(Input.GetMouseButtonDown(0))
@@ -24,7 +23,7 @@ namespace Components
                 
                 // Ray bir noktadan bir noktaya ışın çizer.
                 // Raycast = belirli bir yönde bir ışın gönderir ve ışının ilk çarptığı nesneyi tespit eder.
-                // RaycastAll = berlirli bir yönde ışın gönderir ve çarptığı bütün nesneleri tespit eder.
+                // RaycastAll = berlirli bir yönde ışın gönderir ve çarptığı bütün nesneleri tespit eder.başlangıç ve max
                 // RaycastHit = tekil çarpışmayı alır.  -Raycashit[]= çarpışma dizisi.
 
                 Tile firstHitTile = null;
@@ -44,5 +43,21 @@ namespace Components
                 InputEvents.MouseUpGrid?.Invoke(inputRay.origin + inputRay.direction);
             }
         }
+
+        protected override void RegisterEvents()
+        {
+            GridEvents.InputStart += OnInputStart;
+            GridEvents.InputStop += OnInputStop;
+        }
+        private void OnInputStop() { _inputRoutine.StopCoroutine(); }
+        
+        private void  OnInputStart(){_inputRoutine.StartCoroutine();}
+        
+        protected override void UnRegisterEvents()
+        {
+            GridEvents.InputStart -= OnInputStart;
+            GridEvents.InputStop -= OnInputStop;
+        }
     }
+    
 }

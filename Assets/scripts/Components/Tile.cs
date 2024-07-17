@@ -1,39 +1,210 @@
-﻿using UnityEngine;
+﻿/*
+using System;
+using Extensions.DoTween;
+using Extensions.Unity;
+using UnityEngine;
+using DG.Tweening;
 
 namespace Components
 {
-    public class Tile:MonoBehaviour, ICoordSet
+    
+    
+    public class Tile:MonoBehaviour, ITileGrid,IPoolObj,ITweenContainerBind
     {
-        public Vector2Int Coord => _coords;
-        [SerializeField] private Vector2Int _coords; 
+        public Vector2Int Coords => _coords;
         public int ID => _id;
+        [SerializeField] private Vector2Int _coords;
         [SerializeField] private int _id;
-        public void Construct(Vector2Int coords)
+        [SerializeField] private SpriteRenderer _spriteRenderer;
+        [SerializeField]private Transform _transform;
+        public MonoPool MyPool { get; set; }
+        public ITweenContainer TweenContainer{ get; set; }
+        public bool ToBeDestroyed { get; set; }
+
+
+        private void Awake()
         {
-            _coords = coords;
+            TweenContainer = TweenContain.Install(this);
+        }
+
+        private void OnDisable()
+        {
+            TweenContainer.Clear();
         }
 
         private void OnMouseDown()
         {
-        
+            
         }
 
-        void ICoordSet.SetCoord(Vector2Int coord)
+        void ITileGrid.SetCoord(Vector2Int coord)
         {
             _coords = coord;
         }
-        
-        void ICoordSet.SetCoord(int x, int y)
+        void ITileGrid.SetCoord(int x, int y)
         {
             _coords = new Vector2Int(x, y);
         }
-     
+        
+        public void AfterCreate(){}
+
+        public void BeforeDeSpawn()
+        {
+            
+        }
+         public void TweenDelayedDeSpawn(Func<bool>onComplete){}
+
+         public void AfterSpawn()
+         {
+             ToBeDestroyed = false;
+             
+         }
+
+         public void Teleport(Vector3 worldPos)
+         {
+             _transform.position = worldPos;
+         }
+
+         public void Construct(Vector2Int coords)
+         {
+             _coords = coords;
+         }
+
+         public Tween DoMove(Vector3 worldPos, TweenCallback onComplete = null)
+         {
+             TweenContainer.AddTween = _transform.DOMove(worldPos, 1f);
+             TweenContainer.AddedTween.onComplete += onComplete;
+             return TweenContainer.AddedTween;
+         }
+
+         public Sequence DoHint(Vector3 worldPos, TweenCallback onComplete = null)
+         {
+             _spriteRenderer.sortingOrder = EnvVar.HintSpriteLayer;
+             // SortingOrder: listenin veya gruplamanın düzenin belirlemek için kullanılır.belirli bir sıraya
+             // göre düzenleme sağlar Örnk.artan veya azalana göre sıralar.
+             Vector3 lastPos = _transform.position;
+
+             TweenContainer.AddSequence = DOTween.Sequence();
+
+             TweenContainer.AddedSeq.Append(_transform.DOMove(worldPos, 1f));
+             TweenContainer.AddedSeq.Append(_transform.DOMove(lastPos, 1f));
+             //Burada Tween hareket ettirmek için kullanıyıruz. ilk olarak worldPos 1 saniye içinde hareket
+             // ettir , soonra LastPos konumuna doğru 1 saniye içinde hareket ettir.birden fazla tween hareketi.
+
+             TweenContainer.AddedSeq.onComplete += onComplete;
+             TweenContainer.AddedSeq.onComplete += delegate
+             {
+                 _spriteRenderer.sortingOrder = EnvVar.TileSpriteLayer;
+             };
+             return TweenContainer.AddedSeq;
+             // AddesSeq  veri yapısında yeni elemanları eklenmesiSırasında Kullanılır.Sırayla ekler.
+
+         }
     }
 
-    public interface ICoordSet
+    public interface ITileGrid
     {
         void SetCoord(Vector2Int coord); 
         
+        void SetCoord(int x, int y);
+    }
+}
+*/
+using System;
+using DG.Tweening;
+using Extensions.DoTween;
+using Extensions.Unity;
+using UnityEngine;
+
+namespace Components
+{
+    public class Tile : MonoBehaviour, ITileGrid, IPoolObj, ITweenContainerBind
+    {
+        public Vector2Int Coords => _coords;
+        public int ID => _id;
+        [SerializeField] private Vector2Int _coords;
+        [SerializeField] private int _id;
+        [SerializeField] private SpriteRenderer _spriteRenderer;
+        [SerializeField] private Transform _transform;
+        public MonoPool MyPool{get;set;}
+        public ITweenContainer TweenContainer{get;set;}
+        public bool ToBeDestroyed{get;set;}
+
+        private void Awake()
+        {
+            TweenContainer = TweenContain.Install(this);
+        }
+
+        private void OnDisable()
+        {
+            TweenContainer.Clear();
+        }
+
+        private void OnMouseDown() {}
+
+        void ITileGrid.SetCoord(Vector2Int coord)
+        {
+            _coords = coord;
+        }
+
+        void ITileGrid.SetCoord(int x, int y)
+        {
+            _coords = new Vector2Int(x, y);
+        }
+
+        public void AfterCreate() {}
+
+        public void BeforeDeSpawn()
+        {
+        }
+
+        public void TweenDelayedDeSpawn(Func<bool> onComplete) {}
+
+        public void AfterSpawn()
+        {
+            ToBeDestroyed = false;
+            //RESET METHOD (Resurrect)
+        }
+
+        public void Teleport(Vector3 worldPos)
+        {
+            _transform.position = worldPos;
+        }
+
+        public void Construct(Vector2Int coords) {_coords = coords;}
+
+        public Tween DoMove(Vector3 worldPos, TweenCallback onComplete = null)
+        {
+            TweenContainer.AddTween = _transform.DOMove(worldPos, 1f);
+
+            TweenContainer.AddedTween.onComplete += onComplete;
+
+            return TweenContainer.AddedTween;
+        }
+
+        public Sequence DoHint(Vector3 worldPos, TweenCallback onComplete = null)
+        {
+            _spriteRenderer.sortingOrder = EnvVar.HintSpriteLayer;
+            
+            Vector3 lastPos = _transform.position;
+            
+            TweenContainer.AddSequence = DOTween.Sequence();
+            
+            TweenContainer.AddedSeq.Append(_transform.DOMove(worldPos, 1f));
+            TweenContainer.AddedSeq.Append(_transform.DOMove(lastPos, 1f));
+
+            TweenContainer.AddedSeq.onComplete += onComplete;
+            TweenContainer.AddedSeq.onComplete += delegate
+            {
+                _spriteRenderer.sortingOrder = EnvVar.TileSpriteLayer;
+            };
+            return TweenContainer.AddedSeq;
+        }
+    }
+
+    public interface ITileGrid
+    {
+        void SetCoord(Vector2Int coord);
         void SetCoord(int x, int y);
     }
 }

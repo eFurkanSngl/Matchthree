@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4116823361279375456}
   - component: {fileID: 3910937070959548205}
   - component: {fileID: -1744206570746370825}
-  - component: {fileID: -787258159789178116}
   - component: {fileID: -530783849934245306}
+  - component: {fileID: -4582170830762724110}
   m_Layer: 0
   m_Name: TileBase
   m_TagString: Untagged
@@ -30,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 41be04b31a12e3f4fac211722a6b6513, type: 3}
+  m_Sprite: {fileID: -17822463, guid: a71fbed06d55e984cb4e8ce80bdca6b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,27 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coords: {x: 0, y: 0}
   _id: -1
---- !u!65 &-787258159789178116
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4448653825823646165}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 0.9700599, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  _spriteRenderer: {fileID: 3910937070959548205}
+  _transform: {fileID: 4116823361279375456}
 --- !u!54 &-530783849934245306
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -149,3 +130,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &-4582170830762724110
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4448653825823646165}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 11.099999, y: 11.360587, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}

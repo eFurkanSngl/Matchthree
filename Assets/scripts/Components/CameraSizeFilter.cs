@@ -27,5 +27,5 @@ namespace Components
         {
             GridEvents.GridLoaded -= OnGridLoaded;
         }
-    }
+    } 
 }
