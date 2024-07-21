@@ -8,12 +8,13 @@ public class MusicAudio : MonoBehaviour
     {
         if (mute)
         {
-            AudioListener.volume = 0;
+            AudioListener.volume = 1;
+            
             //Eğer düğme işaretliyse tüm sesleri sustur
         }
         else
         {
-            AudioListener.volume = -1;
+            AudioListener.volume = 0;
         }
     }
 }

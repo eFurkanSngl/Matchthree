@@ -112,7 +112,7 @@ namespace Components
             GridEvents.InputStart?.Invoke();
             gameOverPanel = GameObject.Find("GameOverCanvas");
 
-
+            
             if (gameOverPanel != null)
             {
                 _canvasGroup = gameOverPanel.GetComponent<CanvasGroup>();
@@ -543,14 +543,14 @@ namespace Components
             RestartGame();
         }
 
-        private void RestartGame()
+        public void RestartGame()
         {
             ClearGrid();
             ResetScoreMulti();
             StartGame();
         }
 
-        private void ClearGrid()
+        public void ClearGrid()
         {
             foreach (Tile tile in _grid)
             {

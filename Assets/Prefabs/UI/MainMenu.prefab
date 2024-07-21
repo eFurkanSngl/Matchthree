@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 2724534135119356132}
   - component: {fileID: 5684681181625420675}
   - component: {fileID: 2511386564605843577}
-  - component: {fileID: 2581958864578092930}
+  - component: {fileID: 7345894438269790946}
   m_Layer: 5
   m_Name: NewGameBTN
   m_TagString: Untagged
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2581958864578092930
+--- !u!114 &7345894438269790946
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -250,10 +250,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4112055304237701699}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd096814bd2644b9b8d8a1d673d0814e, type: 3}
+  m_Script: {fileID: 11500000, guid: 826380fb5d8c47e7a8f277696c4b9098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playButton: {fileID: 2511386564605843577}
+  _button: {fileID: 2511386564605843577}
 --- !u!1 &4934229212229628034
 GameObject:
   m_ObjectHideFlags: 0

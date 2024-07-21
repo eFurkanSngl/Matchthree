@@ -8,17 +8,18 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Utils;
 
-public class MainMenuBTN : UIBTN
+public class RetryMainBTN : UIBTN
 {
     protected override void OnClick()
     {
         LoadMainScene();
-        MainUIEvents.MainMenuBTN?.Invoke();
+        MainUIEvents.RetryBTN?.Invoke();
     }
 
     private void LoadMainScene()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Main");
     }
     
 }
+
