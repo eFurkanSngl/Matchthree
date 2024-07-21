@@ -51,6 +51,16 @@ namespace Components.UI
         {
             GridEvents.MatchGroupDespawn -= OnMatchGroupDespawn;
         }
+
+        public int GetCurrentScore()
+        {
+            return _playerScore;
+        }
+
+        public void SetScore(int i)
+        {
+            _playerScore = 0;
+        }
     }
     
 }

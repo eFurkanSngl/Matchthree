@@ -1,0 +1,919 @@
+fileFormatVersion: 2
+guid: 59c54b4ddfb927a41b80df700521e146
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 523
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2d2ab4d2bb39f4fa4b2578f6d74f62
+      internalID: -1859752090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_1
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 523
+        width: 86
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 312352cc3831d504f9481199279893cb
+      internalID: -46768563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_2
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 522
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7ee87e92eaf7a1438e9e7840c2b1e6f
+      internalID: -1279287674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_3
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 523
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d327ee9e8becfb1449cbc71402436cba
+      internalID: 1079468997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_4
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 523
+        width: 86
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9446fa4d3487424ea831d76e4bf9735
+      internalID: -1340244470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_5
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 523
+        width: 86
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c2eb6e43159ec4a94efceae46ca836
+      internalID: 2004837920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_6
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 422
+        width: 84
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a90da55461523e342b6350eb16caeb23
+      internalID: 1733372143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_7
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 422
+        width: 86
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c20433a4818a84784bafa8436f8d92
+      internalID: 478124922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_8
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 422
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb034e7e5ccf454a8995ed129448137
+      internalID: -1565691387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_9
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 422
+        width: 84
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8617c921bb46e0546a6b9983f212ced7
+      internalID: -414025198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_10
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 422
+        width: 86
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868a162e28fdae14091efea07500ac39
+      internalID: -809393155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_11
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 422
+        width: 86
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae25da16b82b094429b87a9db7507acf
+      internalID: -457029536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_12
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 322
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea212c0fdebfa404abff2df2a4596d0b
+      internalID: 624889035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_13
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 322
+        width: 86
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7752a0688a6c8a747a81eee861626116
+      internalID: 1008574070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_14
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 322
+        width: 85
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab89b060498bda48a7eaccc3330be57
+      internalID: -707977742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_15
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 322
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7bb52c20d37d7458e4adc713441aa8
+      internalID: 1158535921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_16
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 322
+        width: 86
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2724901c08623244f9db27c842f94d91
+      internalID: -1228171235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_17
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 322
+        width: 86
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fd78ea8641f50b479cabc7169ebc278
+      internalID: 1502131742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_18
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 221
+        width: 84
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9844343962f51e47afcb9125ccc7261
+      internalID: -1585529266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_19
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 221
+        width: 86
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de849f75085050d48bed1223a58623c8
+      internalID: 23422003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_20
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 221
+        width: 85
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2b9dce1a2a80048bb53bc16022fc46
+      internalID: 717092454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_21
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 221
+        width: 84
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f0d2666f0820544182e974cadacb169
+      internalID: 898342271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_22
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 221
+        width: 86
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c90b583c435bb348b1a7c8e7abbaf7e
+      internalID: 1518578141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_23
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 221
+        width: 86
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36d49b6b747b5964b9ee08b11479b08c
+      internalID: -1667914146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_24
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 122
+        width: 84
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f80c14cc67aa4648a3b9daebce16a84
+      internalID: -339179588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_25
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 122
+        width: 86
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3629c520882ce2a4a83d4cd1b7090f66
+      internalID: -25586994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_26
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 122
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81bea457cf93fd440879a1939b682038
+      internalID: 352440413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_27
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 122
+        width: 84
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 130a3832f5a19094099827a3fa012386
+      internalID: 850236429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_28
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 122
+        width: 86
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57742cafcdcba694d94f67c2c4acc006
+      internalID: -221684088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_29
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 122
+        width: 86
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6ff8640438b6804d9c88a276886ac51
+      internalID: 1407023741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_30
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 22
+        width: 85
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9974a1bd58debe34a8a8665e8cf3e11d
+      internalID: 43257098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_31
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 22
+        width: 86
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e59c2cbafbd8f47b0462cecaced856
+      internalID: 1433230402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_32
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 22
+        width: 85
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c03913e2a0e85354f83e3ecf18bc65c2
+      internalID: -499125796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_33
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 22
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d72a7144261574e4289a85a5ad65a3e1
+      internalID: 1741976835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_34
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 22
+        width: 86
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8915cffe181206e42801d74b19825a9b
+      internalID: 1194399658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_35
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 22
+        width: 86
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f12978bf121554181cf86451360711
+      internalID: -724042833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f6d75edbf6c6dc247a783590c7c68903
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_0: -1859752090
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_1: -46768563
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_10: -809393155
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_11: -457029536
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_12: 624889035
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_13: 1008574070
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_14: -707977742
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_15: 1158535921
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_16: -1228171235
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_17: 1502131742
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_18: -1585529266
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_19: 23422003
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_2: -1279287674
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_20: 717092454
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_21: 898342271
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_22: 1518578141
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_23: -1667914146
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_24: -339179588
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_25: -25586994
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_26: 352440413
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_27: 850236429
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_28: -221684088
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_29: 1407023741
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_3: 1079468997
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_30: 43257098
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_31: 1433230402
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_32: -499125796
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_33: 1741976835
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_34: 1194399658
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_35: -724042833
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_4: -1340244470
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_5: 2004837920
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_6: 1733372143
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_7: 478124922
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_8: -1565691387
+      gui-buttons-icons-set-game-interfaces-color-yellow_38100-287_9: -414025198
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

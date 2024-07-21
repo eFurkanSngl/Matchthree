@@ -3,6 +3,7 @@ using Extensions.Unity;
 using UnityEngine;
 using Zenject;
 using Extensions.Unity.MonoHelper;
+using UnityEngine.InputSystem.LowLevel;
 
 namespace Components
 {
@@ -11,6 +12,7 @@ namespace Components
         [Inject] private InputEvents InputEvents{get;set;}
         [Inject] private Camera Camera{get;set;}
         [Inject] private GridEvents GridEvents{get; set; }
+        
         private RoutineHelper _inputRoutine;
 
         private void Awake() {_inputRoutine = new RoutineHelper(this, null, InputUpdate);}

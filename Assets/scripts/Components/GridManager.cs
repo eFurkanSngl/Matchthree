@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Components.UI;
 using DG.Tweening;
 using Events;
 using Extensions.DoTween;
@@ -8,9 +9,12 @@ using Extensions.System;
 using Extensions.Unity;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Zenject;
 using Sequence = DG.Tweening.Sequence;
+
 
 namespace Components
 {
@@ -62,9 +66,15 @@ namespace Components
         private Coroutine _destroyRoutine;
         public ITweenContainer TweenContainer { get; set; }
         private Coroutine _hintRoutine;
+        
         [SerializeField] private int _scoreMulti;
-
-
+        
+        [SerializeField] private GameObject gameOverPanel;
+        [SerializeField] private PlayerScoreTMP _playerScoreTMP;
+        [SerializeField] private TMP_Text gameOverScoreText;
+        private CanvasGroup _canvasGroup;
+        [SerializeField] private GameObject _matchParticlePrefab;
+        
         private void Awake()
         {
             _tilePoolsByPrefabID = new List<MonoPool>();
@@ -100,6 +110,27 @@ namespace Components
             IsGameOver(out _hintTile, out _hintDir);
             GridEvents.GridLoaded?.Invoke(_gridBounds);
             GridEvents.InputStart?.Invoke();
+            gameOverPanel = GameObject.Find("GameOverCanvas");
+
+
+            if (gameOverPanel != null)
+            {
+                _canvasGroup = gameOverPanel.GetComponent<CanvasGroup>();
+                gameOverScoreText = gameOverPanel.GetComponentInChildren<TMP_Text>();
+
+                if (_canvasGroup == null)
+                {
+                    Debug.LogError("Canvas Group null");
+                    return;
+                }
+            }
+
+            _canvasGroup.alpha = 0;
+            _canvasGroup.interactable = false;
+            _canvasGroup.blocksRaycasts = false;
+            
+            gameOverPanel.SetActive(false);
+            _playerScoreTMP = FindObjectOfType<PlayerScoreTMP>();
         }
 
         private void OnEnable()
@@ -245,61 +276,119 @@ namespace Components
 
         private void SpawnAndAllocateTiles()
         {
-            _tilesToMove = new Tile[_gridSizeX,_gridSizeY];
-
-            for(int y = 0; y < _gridSizeY; y ++)
+            // _tilesToMove = new Tile[_gridSizeX,_gridSizeY];
+            //
+            // for(int y = 0; y < _gridSizeY; y ++)
+            // {
+            //     int spawnStartY = 0;
+            //     
+            //     for(int x = 0; x < _gridSizeX; x ++)
+            //     {
+            //         Vector2Int thisCoord = new(x, y);
+            //         Tile thisTile = _grid.Get(thisCoord);
+            //
+            //         if(thisTile) continue;
+            //
+            //         int spawnPoint = _gridSizeY;
+            //
+            //         for(int y1 = y; y1 <= spawnPoint; y1 ++)
+            //         {
+            //             if(y1 == spawnPoint)
+            //             {
+            //                 if(spawnStartY == 0)
+            //                 {
+            //                     spawnStartY = thisCoord.y;
+            //                 }
+            //             
+            //                 MonoPool randomPool = _tilePoolsByPrefabID.Random();
+            //                 Tile newTile = SpawnTile
+            //                 (
+            //                     randomPool, 
+            //                     _grid.CoordsToWorld(_transform, new Vector2Int(x, spawnPoint)),
+            //                     thisCoord
+            //                 );
+            //             
+            //                 _tilesToMove[thisCoord.x, thisCoord.y] = newTile;
+            //                 break;
+            //             }
+            //
+            //             Vector2Int emptyCoords = new(x, y1);
+            //
+            //             Tile mostTopTile = _grid.Get(emptyCoords);
+            //
+            //             if(mostTopTile)
+            //             {
+            //                 _grid.Set(null, mostTopTile.Coords);
+            //                 _grid.Set(mostTopTile, thisCoord);
+            //             
+            //                 _tilesToMove[thisCoord.x, thisCoord.y] = mostTopTile;
+            //
+            //                 break;
+            //             }
+            //         }
+            //     }
+            // }
+            //
+            // StartCoroutine(RainDownRoutine());
             {
-                int spawnStartY = 0;
-                
-                for(int x = 0; x < _gridSizeX; x ++)
+                _tilesToMove = new Tile[_gridSizeX, _gridSizeY];
+
+                for (int y = 0; y < _gridSizeY; y++)
                 {
-                    Vector2Int thisCoord = new(x, y);
-                    Tile thisTile = _grid.Get(thisCoord);
+                    int spawnStartY = 0;
 
-                    if(thisTile) continue;
-
-                    int spawnPoint = _gridSizeY;
-
-                    for(int y1 = y; y1 <= spawnPoint; y1 ++)
+                    for (int x = 0; x < _gridSizeX; x++)
                     {
-                        if(y1 == spawnPoint)
+                        Vector2Int thisCoord = new(x, y);
+                        Tile thisTile = _grid.Get(thisCoord);
+
+                        if (thisTile) continue;
+
+                        int spawnPoint = _gridSizeY;
+
+                        for (int y1 = y; y1 <= spawnPoint; y1++)
                         {
-                            if(spawnStartY == 0)
+                            if (y1 == spawnPoint)
                             {
-                                spawnStartY = thisCoord.y;
+                                if (spawnStartY == 0)
+                                {
+                                    spawnStartY = thisCoord.y;
+                                }
+
+                                MonoPool randomPool = _tilePoolsByPrefabID.Random();
+                                Tile newTile = SpawnTile
+                                (
+                                    randomPool,
+                                    _grid.CoordsToWorld(_transform, new Vector2Int(x, spawnPoint)),
+                                    thisCoord
+                                );
+
+                                _tilesToMove[thisCoord.x, thisCoord.y] = newTile;
+                                break;
                             }
-                        
-                            MonoPool randomPool = _tilePoolsByPrefabID.Random();
-                            Tile newTile = SpawnTile
-                            (
-                                randomPool, 
-                                _grid.CoordsToWorld(_transform, new Vector2Int(x, spawnPoint)),
-                                thisCoord
-                            );
-                        
-                            _tilesToMove[thisCoord.x, thisCoord.y] = newTile;
-                            break;
-                        }
 
-                        Vector2Int emptyCoords = new(x, y1);
+                            Vector2Int emptyCoords = new(x, y1);
 
-                        Tile mostTopTile = _grid.Get(emptyCoords);
+                            Tile mostTopTile = _grid.Get(emptyCoords);
 
-                        if(mostTopTile)
-                        {
-                            _grid.Set(null, mostTopTile.Coords);
-                            _grid.Set(mostTopTile, thisCoord);
-                        
-                            _tilesToMove[thisCoord.x, thisCoord.y] = mostTopTile;
+                            if (mostTopTile)
+                            {
+                                _grid.Set(null, mostTopTile.Coords);
+                                _grid.Set(mostTopTile, thisCoord);
 
-                            break;
+                                _tilesToMove[thisCoord.x, thisCoord.y] = mostTopTile;
+
+                                break;
+                            }
                         }
                     }
                 }
-            }
 
-            StartCoroutine(RainDownRoutine());
+                StartCoroutine(RainDownRoutine());
+            }
         }
+
+
 
         private Tile SpawnTile(MonoPool randomPool, Vector3 spawnWorldPos, Vector2Int spawnCoords)
         {
@@ -375,20 +464,115 @@ namespace Components
         }
         private IEnumerator DestroyRoutine()
         {
-            foreach(List<Tile> matches in _lastMatches)
+            foreach (List<Tile> matches in _lastMatches)
             {
                 IncScoreMulti();
                 matches.DoToAll(DespawnTile);
-                
-                //TODO: Show score multi text in ui as PunchScale
-                
+
+                foreach (Tile tile in matches)
+                {
+                    Vector3 particlePosition = _grid.CoordsToWorld(_transform, tile.Coords);
+                    Instantiate(_matchParticlePrefab, particlePosition, Quaternion.identity);
+
+                }
                 GridEvents.MatchGroupDespawn?.Invoke(matches.Count * _scoreMulti);
-    
+
                 yield return new WaitForSeconds(0.1f);
+                
             }
+            SpawnAndAllocateTiles();
+            TestGameOver();
             
+            // foreach(List<Tile> matches in _lastMatches)
+            // {
+            //     IncScoreMulti();
+            //     matches.DoToAll(DespawnTile);
+            //     
+            //     GridEvents.MatchGroupDespawn?.Invoke(matches.Count * _scoreMulti);
+            //
+            //     yield return new WaitForSeconds(0.1f);
+            // }
+        }
+
+        private void TestGameOver()
+        {
+            // bool isGameOver = IsGameOver(out Tile hintTile, out GridDir hintDir);
+            //
+            // Debug.LogWarning($"isGameOver{isGameOver} hintTile {hintTile} hintDir{hintDir}",hintTile);
+            // if (isGameOver)
+            // {
+            //     ShowGamePanel();
+            // }
+            bool isGameOver = IsGameOver(out Tile hintTile, out GridDir hintDir);
+
+            Debug.LogWarning($"isGameOver: {isGameOver}, hintTile {hintTile}, hintDir {hintDir}", hintTile);
+            if (isGameOver)
+            {
+                ShowGameOverPanel();
+            }
+        }
+
+        private void ShowGameOverPanel()
+        {
+            _canvasGroup.alpha = 1;
+            _canvasGroup.interactable = true;
+            _canvasGroup.blocksRaycasts = true;
+
+            Time.timeScale = 0;
+            
+            Debug.Log("Show gameover panel");
+            gameOverPanel.SetActive(true);
+            gameOverScoreText.text = $"Score:{_playerScoreTMP.GetCurrentScore()}";
+        }
+
+        private void HideGameOverPanel()
+        {
+            _canvasGroup.alpha = 0;
+            _canvasGroup.interactable = false;
+            _canvasGroup.blocksRaycasts = false;
+
+            Time.timeScale = 1;
+            Debug.Log("Hide gameover panel");
+            gameOverPanel.SetActive(false);
+        }
+
+        public void OnNewGameButtonClicked()
+        {
+            Debug.Log("New game button clicked , Restarting game");
+            HideGameOverPanel();
+            RestartGame();
+        }
+
+        private void RestartGame()
+        {
+            ClearGrid();
+            ResetScoreMulti();
+            StartGame();
+        }
+
+        private void ClearGrid()
+        {
+            foreach (Tile tile in _grid)
+            {
+                if (tile != null)
+                {
+                    DespawnTile(tile);
+                }
+            }
+        }
+
+        private void ResetScore()
+        {
+            _scoreMulti = 0;
+            _playerScoreTMP.SetScore(0);
+        }
+
+        private void StartGame()
+        {
             SpawnAndAllocateTiles();
         }
+
+
         private void DespawnTile(Tile e)
         {
             _grid.Set(null, e.Coords);

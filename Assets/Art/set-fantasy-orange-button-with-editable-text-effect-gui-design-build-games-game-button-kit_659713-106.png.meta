@@ -1,0 +1,347 @@
+fileFormatVersion: 2
+guid: e4595f342cd53704facc8bc793a6cb76
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: set-fantasy-orange-button-with-editable-text-effect-gui-design-build-games-game-button-kit_659713-106_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 510
+        width: 284
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b14091f1364f64698e25f79133c1dc
+      internalID: 307771823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-fantasy-orange-button-with-editable-text-effect-gui-design-build-games-game-button-kit_659713-106_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 512
+        width: 284
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f86e88bd7f76e444b320d80a49664e1
+      internalID: -1335392451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-fantasy-orange-button-with-editable-text-effect-gui-design-build-games-game-button-kit_659713-106_2
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 384
+        width: 284
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b119e56b5dba2ea408ce81644d3636e4
+      internalID: 2009810126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-fantasy-orange-button-with-editable-text-effect-gui-design-build-games-game-button-kit_659713-106_3
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 283
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef6151911ef46db478e98dde1c7deb71
+      internalID: -1360675475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-fantasy-orange-button-with-editable-text-effect-gui-design-build-games-game-button-kit_659713-106_4
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 261
+        width: 284
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286b83b982e21a644913bd1fcd8243f3
+      internalID: -430078502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-fantasy-orange-button-with-editable-text-effect-gui-design-build-games-game-button-kit_659713-106_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 261
+        width: 284
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39974d041629f8f418fe0670a518cb67
+      internalID: -1151729591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-fantasy-orange-button-with-editable-text-effect-gui-design-build-games-game-button-kit_659713-106_6
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 137
+        width: 285
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d44fb8b2e67fe24a840db34032026fd
+      internalID: 502372045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-fantasy-orange-button-with-editable-text-effect-gui-design-build-games-game-button-kit_659713-106_7
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 137
+        width: 287
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28614445852f07a4dbbb91d14c879d66
+      internalID: -2093050497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-fantasy-orange-button-with-editable-text-effect-gui-design-build-games-game-button-kit_659713-106_8
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 11
+        width: 285
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8ef4394bfb19ef40b7219811c4c6d16
+      internalID: 1989459408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: set-fantasy-orange-button-with-editable-text-effect-gui-design-build-games-game-button-kit_659713-106_9
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 11
+        width: 284
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e34d5c5c0396abc49a905e42cd3e2ea1
+      internalID: -196717033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 42e1ff7bd3c3f71458f326c3ca7db1a2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      set-fantasy-orange-button-with-editable-text-effect-gui-design-build-games-game-button-kit_659713-106_0: 307771823
+      set-fantasy-orange-button-with-editable-text-effect-gui-design-build-games-game-button-kit_659713-106_1: -1335392451
+      set-fantasy-orange-button-with-editable-text-effect-gui-design-build-games-game-button-kit_659713-106_2: 2009810126
+      set-fantasy-orange-button-with-editable-text-effect-gui-design-build-games-game-button-kit_659713-106_3: -1360675475
+      set-fantasy-orange-button-with-editable-text-effect-gui-design-build-games-game-button-kit_659713-106_4: -430078502
+      set-fantasy-orange-button-with-editable-text-effect-gui-design-build-games-game-button-kit_659713-106_5: -1151729591
+      set-fantasy-orange-button-with-editable-text-effect-gui-design-build-games-game-button-kit_659713-106_6: 502372045
+      set-fantasy-orange-button-with-editable-text-effect-gui-design-build-games-game-button-kit_659713-106_7: -2093050497
+      set-fantasy-orange-button-with-editable-text-effect-gui-design-build-games-game-button-kit_659713-106_8: 1989459408
+      set-fantasy-orange-button-with-editable-text-effect-gui-design-build-games-game-button-kit_659713-106_9: -196717033
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
