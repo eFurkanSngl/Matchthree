@@ -13,6 +13,7 @@ public class RetryMainBTN : UIBTN
     protected override void OnClick()
     {
         LoadMainScene();
+        // LoadMainScene Methodu olmadan da calışır zaten Invoke edilip UnityAction sağlanıyor.
         MainUIEvents.RetryBTN?.Invoke();
     }
 

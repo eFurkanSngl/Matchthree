@@ -744,6 +744,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -113.84
       objectReference: {fileID: 0}
+    - target: {fileID: 1719291383194454916, guid: b814a75549273f041bbc97f216717f3f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3017640216774339825, guid: b814a75549273f041bbc97f216717f3f, type: 3}
       propertyPath: m_SizeDelta.x
       value: 176
@@ -1068,6 +1072,14 @@ PrefabInstance:
     - target: {fileID: 49636316392499274, guid: 7f4acbd77b8a28541bf6f14fc5f27053, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 536064367082938042, guid: 7f4acbd77b8a28541bf6f14fc5f27053, type: 3}
+      propertyPath: m_Type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 536064367082938042, guid: 7f4acbd77b8a28541bf6f14fc5f27053, type: 3}
+      propertyPath: m_FillMethod
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2515493377300186369, guid: 7f4acbd77b8a28541bf6f14fc5f27053, type: 3}
       propertyPath: m_Pivot.x

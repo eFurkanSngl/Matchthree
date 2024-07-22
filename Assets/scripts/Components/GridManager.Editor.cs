@@ -55,20 +55,26 @@ namespace Components
         }
 
         [Button]
+        // Button oluşturduk
         private void CalculateBounds()
         {
             _gridBounds = new Bounds();
+            // Yeni bir bounds nesnesi oluşturuyoruz
             
             foreach (Tile tile in _grid)
+                // gridi dönüyoruz 
             {
                 Bounds spriteBounds = tile.GetComponent<SpriteRenderer>().bounds;
                 _gridBounds.Encapsulate(spriteBounds);
+                // Tile SpriteRenderere bileşenin boundslarını alıyor (sınır)
+                // Bu sınırları Encapsulate ile _gridbounds a ekliyoruz
             }
 
             foreach (GameObject border in _gridBorders)
             {
                 Bounds spriteBounds = border.GetComponentInChildren<SpriteRenderer>().bounds;
                 _gridBounds.Encapsulate(spriteBounds);
+                // Bu işlemde borderlar için
             }
         }
         
@@ -85,31 +91,38 @@ namespace Components
                 {
                     DestroyImmediate(o.gameObject);
                 }
+                // Eğer grid boş değilse bütün grid dön onları yok et
             }
 
             _grid = new Tile[_gridSizeX, _gridSizeY];
-            // Burada x ve y olmak üzere tile yarattık
+            // Burada x ve y olmak üzere tile yarattık 
             
             for (int x = 0; x < _gridSizeX; x++)
             for (int y = 0; y < _gridSizeY; y++)
+                // Burada nested loop ile gridin her hücersini dolaşıyoruz
             {
-                List<int> spawnableIds = new(_prefabIds);
+                List<int> spawnableIds = new(_prefabIds);  // Her hücre için uygun renkleri belirtiyor
                 Vector2Int coords = new(x, _gridSizeY - y - 1); // Burada ters çevirme işlemi yapıyoruz.
                 Vector3 pos = new(coords.x, coords.y, 0f); // Vector3 pos değişkenine yeni x.y.z yi atıyoruz.
 
                 _grid.GetSpawnableColors(coords, spawnableIds);
-
                 int randomId = spawnableIds.Random();
-
+                // Rast gele bir renk seçiyor
+                
                 GameObject tilePrefabRandom = _tilePrefabs[randomId];
                 GameObject tileNew = PrefabUtility.InstantiatePrefab(tilePrefabRandom,transform) as GameObject; // Random Prefab yaratmak
                 tileNew.transform.position = pos;
-
+                // Seçilen tipe uygun Prefab Instatiate ediyor
                 
                 Tile tile = tileNew.GetComponent<Tile>();
                 tile.Construct(coords);
+                
+                // Yeni oluşan tile ı doğru poz yerleştiriyor
+                 // Tile nesnesine koordinatlarını atıyor.
+                
 
                 _grid[coords.x, coords.y] = tile; // Ters y kord. Tile atarken dikkat!!
+                // Tileları  grid dizisinde saklıyor.
             }
             
             CalculateBounds();

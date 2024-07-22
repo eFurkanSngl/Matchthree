@@ -10,6 +10,7 @@ namespace Components.UI
         protected override void OnClick()
         {
             LoadMainScene();
+            // LoadMainScene Methodu olmadan da calışır zaten Invoke edilip UnityAction sağlanıyor.
             MainMenuEvents.NewGameBTN?.Invoke();
         }
 
