@@ -69,7 +69,7 @@ namespace Components.UI
         {
             _playerScore = 0;
         }
-        // ♠mevcut skoru almak ve skoru sıfırlamak için kullanılır.
+        // mevcut skoru almak ve skoru sıfırlamak için kullanılır.
     }
     
 }
