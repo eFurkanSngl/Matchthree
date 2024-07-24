@@ -60,16 +60,19 @@ namespace Components.UI
             // Grid dinlemeden Çıkar
         }
 
-        public int GetCurrentScore()
-        {
-            return _playerScore;
-        }
-
-        public void SetScore(int i)
-        {
-            _playerScore = 0;
-        }
-        // mevcut skoru almak ve skoru sıfırlamak için kullanılır.
+       
+        // public int GetCurrentScore()
+        // {
+        //     return _playerScore;
+        // }
+        //
+        // public void SetScore(int i)
+        // {
+        //     _playerScore = 0;
+        // }
+        // // mevcut skoru almak ve skoru sıfırlamak için kullanılır.
+        //
     }
+    
     
 }

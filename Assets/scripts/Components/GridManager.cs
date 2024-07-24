@@ -86,6 +86,15 @@ namespace Components
         [SerializeField] private List<GameObject> _tilePowerupPrefabs;  //PowerUpTileları burada tutuyoruz
         [SerializeField] private List<int> _powerupPrefabIDs;  //PowerUpTile idlerini burada tutuyoruz
         
+        
+        [SerializeField] private int _initialLives = 10;  // Başlangıç Can sayısı
+		[SerializeField] private int _targetScore = 750; // Hedef Score
+        private int _currentLives;     // güncel hak
+        private int _currentScore;      // güncel score
+        [SerializeField] private TMP_Text livesText;  // hakkı tutan text
+        
+        
+        
         private void Awake()
         {
             _tilePoolsByPrefabID = new List<MonoPool>();
@@ -190,12 +199,45 @@ namespace Components
             gameOverPanel.SetActive(false);
             _playerScoreTMP = FindObjectOfType<PlayerScoreTMP>();
             // Oyuncu skorunu gösteren TextMeshPro bileşenini bulur.
+            
+            ResetGame();
 
         }
 
+        private void ResetGame()
+        {
+            SetCurrentLives(_initialLives);  // başlangıç hakkını set ediyo
+            _currentScore = 0;
+            UpdateUI();
+        }
+
+        private void SetCurrentLives(int newLives)
+        {
+            _currentLives = newLives; // fieldları tek bir yerden set edilmesi için event tetiklemek gerektiğinde kullanışlı oluyor.
+        }
+
+        private void UpdateUI()
+        {
+            livesText.text = $"Lives:{_currentLives}";
+        }
         private void OnEnable()
         {
             RegisterEvents();
+        }
+
+        private void OnMatchGroupDespawn(int score)
+        {
+            _currentScore += score;
+            UpdateUI();
+
+            if (_currentScore >= _targetScore)
+            {
+                ShowGameOverPanel(true);
+            }
+            else if (_currentLives <= 0)
+            {
+                ShowGameOverPanel(false);
+            }
         }
 
 
@@ -611,11 +653,11 @@ namespace Components
             Debug.LogWarning($"isGameOver: {isGameOver}, hintTile {hintTile}, hintDir {hintDir}", hintTile);
             if (isGameOver)
             {
-                ShowGameOverPanel();
+                ShowGameOverPanel(true);
             }
         }
 
-        private void ShowGameOverPanel()
+        private void ShowGameOverPanel(bool isWin)
         {
             _canvasGroup.alpha = 1;
             _canvasGroup.interactable = true;
@@ -625,7 +667,8 @@ namespace Components
             
             Debug.Log("Show gameover panel");
             gameOverPanel.SetActive(true);
-            gameOverScoreText.text = $"Score:{_playerScoreTMP.GetCurrentScore()}";
+            gameOverScoreText.text =
+                isWin ? $"Congratulations! You win {_currentScore} points" : $"Game Over Your Score: {_currentScore}";
         }
 
         private void HideGameOverPanel()
@@ -664,11 +707,7 @@ namespace Components
             }
         }
 
-        private void ResetScore()
-        {
-            _scoreMulti = 0;
-            _playerScoreTMP.SetScore(0);
-        }
+    
 
         private void StartGame()
         {
@@ -771,6 +810,7 @@ namespace Components
             InputEvents.MouseUpGrid += OnMouseUpGrid;
             GridEvents.InputStart += OnInputStart;
             GridEvents.InputStop += OnInputStop;
+            GridEvents.MatchGroupDespawn += OnMatchGroupDespawn;
         }
         private void OnInputStop()
         {
@@ -922,7 +962,8 @@ namespace Components
                 else
                 {
                     GridEvents.InputStop?.Invoke();
-
+                    SetCurrentLives(_currentLives-1);
+                    
                     DoTileMoveAnim
                     (
                         _selectedTile,
@@ -1034,6 +1075,7 @@ namespace Components
             
         private void UnRegisterEvents()
         {
+            GridEvents.MatchGroupDespawn -= OnMatchGroupDespawn;
             InputEvents.MouseDownGrid -= OnMouseDownGrid;
             InputEvents.MouseUpGrid -= OnMouseUpGrid;
             GridEvents.InputStart -= OnInputStart;
