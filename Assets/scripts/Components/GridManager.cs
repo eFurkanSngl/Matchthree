@@ -955,7 +955,7 @@ namespace Components
             // Yok edilecek Tileları tutmak için liste oluşturduk
             List<Tile> tilesToDestroy = new List<Tile>();
 
-            // yatay powerUp Control
+            // horiz powerUp Control
             if (powerupTile.ID ==_powerupPrefabIDs[0]) // 0 denme sebebi x ve y x = 0
                                                        // y = 1
             {
