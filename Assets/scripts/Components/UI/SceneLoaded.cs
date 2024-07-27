@@ -9,4 +9,5 @@ public class SceneLoaded : MonoBehaviour
     {
         SceneManager.LoadScene("Level2");
     }
+   
 }   

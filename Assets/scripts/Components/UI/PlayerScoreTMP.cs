@@ -16,6 +16,8 @@ namespace Components.UI
         private int _playerScore;
         // bu fieldlar skor animasyonu ve değerleri için kullanılacak
 
+        [SerializeField] private GridManager GridManager;
+        
         private void Awake()
         {
             TweenContainer = TweenContain.Install(this);
@@ -51,7 +53,9 @@ namespace Components.UI
         {
             _currCounterVal = val;
             _myTMP.text = $"Score: {_currCounterVal}";
-            // Skpr anim için.
+        
+            // GridManager'ı bilgilendiriyoruz
+            GridManager.UpdateScore(_currCounterVal);
         }
 
         protected override void UnRegisterEvents()

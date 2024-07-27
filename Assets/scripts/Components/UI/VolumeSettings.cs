@@ -7,9 +7,12 @@ public class VolumeSettings : MonoBehaviour
     [SerializeField] private AudioMixer _myMixer;
     [SerializeField] private Slider _soundSlider;
     [SerializeField] private AudioSource _mainMenuAudio;
+    public Slider soundSlider;
 
     private void Start()
     {
+        soundSlider.value = PlayerPrefs.GetFloat("Music");
+        
         // Mixer'daki mevcut ses seviyesini al ve slider'a uygula
         if (_myMixer.GetFloat("BGsound", out float volume))
         {
@@ -24,6 +27,8 @@ public class VolumeSettings : MonoBehaviour
     {
         float volume = _soundSlider.value;
         _myMixer.SetFloat("BGsound", volume);
+        
+        PlayerPrefs.SetFloat("Music", soundSlider.value);
         
         // MainMenuAudio'nun sesini de güncelle
         if (_mainMenuAudio != null)

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Components.UI;
+using DefaultNamespace;
 using DG.Tweening;
 using Events;
 using Extensions.DoTween;
@@ -11,6 +12,7 @@ using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Zenject;
 using Sequence = DG.Tweening.Sequence;
@@ -92,6 +94,17 @@ namespace Components
         private int _currentLives;     // güncel hak
         private int _currentScore;      // güncel score
         [SerializeField] private TMP_Text livesText;  // hakkı tutan text
+        [SerializeField] private Button _nextBtn;
+
+
+        [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private AudioClip _tileBangSound;
+
+
+        [SerializeField] private HighScorePanel highScorePanelPanel;
+        // Highscore tipinde değişken 
+        private int _highscore;
+        // fields
         
         
         
@@ -201,9 +214,34 @@ namespace Components
             // Oyuncu skorunu gösteren TextMeshPro bileşenini bulur.
             
             ResetGame();
-
+            LoadHighScore();
+            UpdateHighScorePanel();
         }
 
+        private void LoadHighScore()
+        {
+            _highscore = PlayerPrefs.GetInt("HighScore", 0);
+        }
+        // Burada PlayerPrefse HighScore 0 diye Get ettik
+
+        private void SaveHighScore()
+        {
+            PlayerPrefs.SetInt("HighScore", _highscore);
+            // Okumayı fieldtan alıyor
+            PlayerPrefs.Save();
+            // burada kaydediyor.
+        }
+
+        private void UpdateHighScorePanel()
+        {
+            if (highScorePanelPanel != null)
+            {
+                highScorePanelPanel.UpdateHighScore(_highscore);
+            }
+            // Eğer HighScore panel boş değilse
+            // _HighScorePanel HighScoredan türediği için içindeki methodlaı alıyor
+        }
+        
         private void ResetGame()
         {
             SetCurrentLives(_initialLives);  // başlangıç hakkını set ediyo
@@ -233,10 +271,20 @@ namespace Components
             if (_currentScore >= _targetScore)
             {
                 ShowGameOverPanel(true);
+                _nextBtn.gameObject.SetActive(true);
+                
             }
             else if (_currentLives <= 0)
             {
                 ShowGameOverPanel(false);
+                _nextBtn.gameObject.SetActive(false);
+            }
+
+            if (_currentLives > _highscore)
+            {
+                _highscore = _currentScore;
+                SaveHighScore();
+                UpdateHighScorePanel();
             }
         }
 
@@ -607,6 +655,15 @@ namespace Components
             
             _destroyRoutine = StartCoroutine(DestroyRoutine());
         }
+
+        private void PlayBangSound()
+        {
+            if (_audioSource != null && _tileBangSound != null)
+            {
+                _audioSource.PlayOneShot(_tileBangSound);
+            }
+        }
+        
         private IEnumerator DestroyRoutine()
         {
             foreach (List<Tile> matches in _lastMatches)
@@ -621,6 +678,7 @@ namespace Components
 
                 }
                 GridEvents.MatchGroupDespawn?.Invoke(matches.Count * _scoreMulti);
+                PlayBangSound();
 
                 yield return new WaitForSeconds(0.1f);
                 
@@ -667,8 +725,9 @@ namespace Components
             
             Debug.Log("Show gameover panel");
             gameOverPanel.SetActive(true);
-            gameOverScoreText.text =
-                isWin ? $"Congratulations! You win {_currentScore} points" : $"Game Over Your Score: {_currentScore}";
+            gameOverScoreText.text = isWin 
+                ? $"Congratulations! You win {_currentScore} points\nHigh Score: {_highscore}"
+                : $"Game Over. Your Score: {_currentScore}\nHigh Score: {_highscore}";
         }
 
         private void HideGameOverPanel()
@@ -694,6 +753,17 @@ namespace Components
             ClearGrid();
             ResetScoreMulti();
             StartGame();
+        }
+
+        public void UpdateScore(int newScore)
+        {
+            _currentScore = newScore;
+            if (_currentScore > _highscore)
+            {
+                _highscore = _currentScore;
+                SaveHighScore();
+                UpdateHighScorePanel();
+            }
         }
 
         public void ClearGrid()

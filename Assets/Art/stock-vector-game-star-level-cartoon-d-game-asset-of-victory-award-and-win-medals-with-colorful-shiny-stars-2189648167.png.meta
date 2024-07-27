@@ -1,0 +1,567 @@
+fileFormatVersion: 2
+guid: 0e414df09b3e1ec4da19792ab32b7425
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_0
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 675
+        width: 118
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8525c42e61e8d45b53ef87826c2a61
+      internalID: 1916975716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_1
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 675
+        width: 131
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eb7317747e721642967b3f30e556ef8
+      internalID: -949143638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_2
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 674
+        width: 135
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929e9dbf65ceb9a41ad25566a4f72562
+      internalID: -1273078460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_3
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 666
+        width: 137
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7990769f131ecbf4b9bb7114f43af435
+      internalID: -1497068550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_4
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 665
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f54176911eb7b9c4b9073e28b8f1d9af
+      internalID: -1393172650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 323
+        width: 270
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99bcac65ef9370d4a9765c9eb9b9211a
+      internalID: 2096023098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_6
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 482
+        width: 208
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd2b3b16b69eb4e429cf4babe0c02403
+      internalID: 254535803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_7
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 450
+        width: 241
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ae7c21cbece234aa2dc0a8fe67f61a
+      internalID: 418574103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_8
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 500
+        width: 271
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a5c5e2795fbae34cbd13b265d27f241
+      internalID: 792058488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_9
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 491
+        width: 269
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198f6d5ae82c53d4c89b4a31caba9884
+      internalID: -1494548013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_10
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 488
+        width: 244
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f70966924a8b494c81f5342874541a6
+      internalID: -1584681090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_11
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 325
+        width: 289
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2915e197d16fb3d498ee863ad0b6c592
+      internalID: -1177419497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_12
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 324
+        width: 233
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df26d700e04428c44ad4d53ef32b37b4
+      internalID: 1107643836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_13
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 325
+        width: 289
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecd44838beb859d49b692c5c84292cf4
+      internalID: -376211576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_14
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 293
+        width: 191
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a6ae7862d67854daf625a897910cfb
+      internalID: 630836908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_15
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 126
+        width: 138
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e42f56e95cfca24faf6e070b910b598
+      internalID: 70795796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_16
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 126
+        width: 141
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de862c488f46004680afa8e3c825aba
+      internalID: 423712637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_17
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 127
+        width: 135
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d8f8b43d6d79d41a18cc1027ab29a7
+      internalID: 2140136438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_18
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 98
+        width: 173
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59cf8083b69a8414ebd925eeda351bc8
+      internalID: 273682609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_19
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 133
+        width: 180
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6430385475f5f5c4aa223b6951cb9939
+      internalID: -2039004426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a4fb2004fe7fc7b4490a8dd9a45fb89f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_0: 1916975716
+      stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_1: -949143638
+      stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_10: -1584681090
+      stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_11: -1177419497
+      stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_12: 1107643836
+      stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_13: -376211576
+      stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_14: 630836908
+      stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_15: 70795796
+      stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_16: 423712637
+      stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_17: 2140136438
+      stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_18: 273682609
+      stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_19: -2039004426
+      stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_2: -1273078460
+      stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_3: -1497068550
+      stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_4: -1393172650
+      stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_5: 2096023098
+      stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_6: 254535803
+      stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_7: 418574103
+      stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_8: 792058488
+      stock-vector-game-star-level-cartoon-d-game-asset-of-victory-award-and-win-medals-with-colorful-shiny-stars-2189648167_9: -1494548013
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
