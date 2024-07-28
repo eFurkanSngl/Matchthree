@@ -6594,7 +6594,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 137.45, y: 334.01}
+  m_AnchoredPosition: {x: 137.45, y: 343.28}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &644557909
@@ -9273,7 +9273,7 @@ MonoBehaviour:
   - {fileID: 255724481311969882, guid: a09173e9cda6b4b4c953b79163be606a, type: 3}
   _powerupPrefabIDs: 040000000500000006000000
   _initialLives: 10
-  _targetScore: 750
+  _targetScore: 350
   livesText: {fileID: 1780635571}
   _nextBtn: {fileID: 2085350113}
   _audioSource: {fileID: 895710504}
@@ -15584,7 +15584,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TARGET:750
+  m_text: TARGET:350
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
