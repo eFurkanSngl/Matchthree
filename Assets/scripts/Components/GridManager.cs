@@ -853,7 +853,7 @@ namespace Components
         {
             while(true)
             {
-                yield return new WaitForSeconds(3f);
+                yield return new WaitForSeconds(6f);
                 TryShowHint();
             }
         }

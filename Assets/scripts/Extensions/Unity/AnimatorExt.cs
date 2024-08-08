@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+
+#if UNITY_EDITOR
 using UnityEditor.Animations;
+#endif
 using UnityEngine;
 
 namespace Extensions.Unity
@@ -39,7 +42,9 @@ namespace Extensions.Unity
             animatorOverrideController.ApplyOverrides(overrides);
             animator.runtimeAnimatorController = animatorOverrideController;
         }
+
         
+    #if UNITY_EDITOR
         public static void AddAnimClip(this AnimatorController toAnimatorController, AnimationClip newStateMotion, string newStateName, string exitTrig,
             string anyTrig,
             float exitDur,
@@ -65,6 +70,7 @@ namespace Extensions.Unity
             exitTransition.AddCondition(AnimatorConditionMode.If, 0, exitTrig);
             exitTransition.duration = exitDur;
         }
-
+#endif
     }
+    
 }

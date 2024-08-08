@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.32014108, g: 0.2586147, b: 0.36836863, a: 1}
+  m_IndirectSpecularColor: {r: 0.3198864, g: 0.2583932, b: 0.36810303, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9273,7 +9273,7 @@ MonoBehaviour:
   - {fileID: 255724481311969882, guid: a09173e9cda6b4b4c953b79163be606a, type: 3}
   _powerupPrefabIDs: 040000000500000006000000
   _initialLives: 10
-  _targetScore: 350
+  _targetScore: 500
   livesText: {fileID: 1780635571}
   _nextBtn: {fileID: 2085350113}
   _audioSource: {fileID: 895710504}
